@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/imgs/five-icon.png" type="image/x-icon" sizes="30x30">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Css Slider -->
+    <link rel="stylesheet" href="./assets/css/slider/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/slider/owl.theme.default.min.css">
+    <!-- Css Slider -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <title>LuxStay</title>
+</head>
+
+<body>
+    <!-- Loader page -->
+    <!-- <div class="loader">
+        <i class="fal fa-spinner loader-icon"></i>
+    </div> -->
+    <!-- Start: Header -->
+    <div id="header">
+        <div class="container h-100">
+            <div class="header__container">
+                <!-- Start: Logo And Search -->
+                <div class="header__logo">
+                    <a href="./index.html">
+                        <svg version="1.1" viewBox="0 0 50 50" class="header__logo-pc-svg template" id="logo-pc">
+                            <path pid="0"
+                                d="M25.093 0c13.781.06 24.94 11.317 24.882 25.106C49.917 38.894 38.663 50.058 24.88 50 11.1 49.942-.059 38.683.001 24.894.057 11.106 11.31-.058 25.092 0zm11.801 31.9L14.398 16.053c.241-.26.48-.518.74-.777 2.7-2.687 5.971-4.031 9.775-4.015 3.804.015 7.064 1.388 9.741 4.098.238.241.476.482.694.743l-5.951 4.133 2.381 1.688 5.153-3.576v.02L39.33 16.7c-.692-1.203-1.584-2.325-2.616-3.39-3.231-3.292-7.167-4.947-11.788-4.967-4.6-.019-8.53 1.603-11.809 4.867a17.806 17.806 0 00-2.682 3.408l1.429 1.004 23.429 16.51c-.24.26-.48.518-.74.777-2.7 2.687-5.971 4.011-9.775 3.996-3.803-.016-7.063-1.37-9.74-4.08-.258-.26-.496-.521-.734-.782l6.111-4.251-.139-.181-2.183-1.528-5.373 3.735v-.021l-2.377 1.65a17.824 17.824 0 002.654 3.43c3.253 3.291 7.169 4.946 11.769 4.965 4.62.021 8.549-1.602 11.83-4.866 1.06-1.075 1.96-2.21 2.682-3.406l-2.383-1.67z">
+                            </path>
+                        </svg>
+                        <svg version="1.1" viewBox="0 0 244 50" class="header__logo-mobile-svg" id="logo-mobile">
+                            <path pid="0"
+                                d="M25.093 0c13.781.06 24.94 11.317 24.882 25.106C49.917 38.894 38.663 50.058 24.88 50 11.1 49.942-.059 38.683.001 24.894.057 11.106 11.31-.058 25.092 0zm11.801 31.9L14.398 16.053c.241-.26.48-.518.74-.777 2.7-2.687 5.971-4.031 9.775-4.015 3.804.015 7.064 1.388 9.741 4.098.238.241.476.482.694.743l-5.951 4.133 2.381 1.688 5.153-3.576v.02L39.33 16.7c-.692-1.203-1.584-2.325-2.616-3.39-3.231-3.292-7.167-4.947-11.788-4.967-4.6-.019-8.53 1.603-11.809 4.867a17.806 17.806 0 00-2.682 3.408l1.429 1.004 23.429 16.51c-.24.26-.48.518-.74.777-2.7 2.687-5.971 4.011-9.775 3.996-3.803-.016-7.063-1.37-9.74-4.08-.258-.26-.496-.521-.734-.782l6.111-4.251-.139-.181-2.183-1.528-5.373 3.735v-.021l-2.377 1.65a17.824 17.824 0 002.654 3.43c3.253 3.291 7.169 4.946 11.769 4.965 4.62.021 8.549-1.602 11.83-4.866 1.06-1.075 1.96-2.21 2.682-3.406l-2.383-1.67zm45.839 2.652l-12.45-.05.096-21.789a.957.957 0 00-.965-.945l-.678-.003a.96.96 0 00-.974.939v.047c-.048.095-.05.236-.05.33l-.098 22.636a1.337 1.337 0 001.351 1.326l13.805.056a.958.958 0 00.973-.938l.003-.662a1.037 1.037 0 00-1.013-.946v-.001zm27.64-22.67l-.871-.003c-.563-.003-1.027.42-1.027.937l-.075 15.878c-.014 3.157-3.252 5.735-7.197 5.72-3.943-.014-7.158-2.618-7.144-5.775l.123-15.5.052-.282a.957.957 0 00-.201-.756 1.128 1.128 0 00-.767-.332l-.87-.004c-.513-.002-.924.326-1.028.75a.857.857 0 00-.156.47l-.073 15.69c-.02 4.616 4.47 8.402 9.95 8.424 5.48.022 10.004-3.73 10.025-8.3l.122-15.5.054-.282a.952.952 0 00-.203-.755c-.152-.189-.458-.379-.714-.38zm48.638 11.226c-3.275-1.249-6.696-2.496-6.688-4.393.01-2.42 2.721-4.401 6.05-4.387 3.331.014 6.025 2.017 6.014 4.436l-.002.38a.96.96 0 00.961.953l.675.003a.96.96 0 00.971-.945v-.38c.009-1.66-.709-3.276-2.006-4.515-1.635-1.618-4.092-2.532-6.65-2.494-4.873-.02-8.698 3.047-8.715 6.938.03 3.748 4.416 5.38 8.656 6.962 3.324 1.247 6.795 2.495 6.785 4.487-.01 2.372-3.155 4.399-6.775 4.385-3.668-.016-6.747-2.07-6.737-4.44l.001-.38a.961.961 0 00-.96-.954l-.676-.002a.96.96 0 00-.97.945v.38c-.018 3.843 4.215 6.991 9.38 7.012 5.163.022 9.423-3.092 9.44-6.934-.033-3.796-4.464-5.427-8.754-7.057zM193.66 11.84l-18.844-.076c-.547-.003-.996.42-.999.94l-.002.66c-.002.52.443.946.99.949l8.103.032-.095 21.802c-.003.52.443.947.99.949l.696.002c.546.003.996-.42 1-.94l.095-21.802 8.055.031c.547.003.996-.42.999-.94l.003-.66c.003-.52-.443-.946-.99-.947zm49.264.515c-.144-.33-.481-.52-.867-.52l-.87-.005a.963.963 0 00-.677.28l-.145.14-.147.142-6.609 9.677-6.72-9.734c-.048-.046-.096-.094-.096-.14l-.143-.143a.97.97 0 00-.675-.285l-.774-.003a1.021 1.021 0 00-.872.515 1.03 1.03 0 00.045.988l7.966 11.576-.049 11.307c.006.527.437.95.964.946l.675.002a.957.957 0 00.97-.937l.049-11.308 7.923-11.509c.194-.329.243-.705.052-.989zm-37.898 12.047l3.75-7.994 3.728 8.023-7.478-.03zm15.615 10.954v-.047l-10.5-22.733c-.15-.425-.549-.71-1.102-.807-.603-.049-1.156.231-1.41.703v.046l-10.705 22.697v.047l-.204.471c-.095.283-.06.595.097.849.188.258.483.416.802.428l.854.004c.453.001.806-.282.958-.657l.05-.141 4.314-9.277 9.95.04 4.28 9.31.049.14c.15.38.5.664.952.667l.854.002c.352.002.654-.139.806-.422.152-.281.254-.563.104-.847l-.149-.473zm-86.008-15.15l.817.003a.963.963 0 00.729-.347l4.755-6.218.412-.478a.763.763 0 00.095-.915c-.135-.306-.453-.482-.816-.483l-.863-.004a.929.929 0 00-.868.608l-4.983 6.522a.94.94 0 00-.096.915c.135.22.453.394.816.397h.002zm-6.998 8.45l-.819-.002a.96.96 0 00-.728.347l-4.755 6.207-.413.48a.77.77 0 00-.094.92c.135.309.452.485.816.488l.864.002a.91.91 0 00.82-.478l5.03-6.601a.949.949 0 00.095-.92 1.027 1.027 0 00-.816-.443zm8.019-.453l.148.14 5.55 7.248c.248.284.246.662.095.99-.15.332-.5.519-.9.517l-.896-.004a1.013 1.013 0 01-.697-.286l-.149-.14c-.03-.002-.042-.02-.059-.044a.212.212 0 00-.04-.052l-5.501-7.151a1.005 1.005 0 01-.15-.237l-11.694-15.39-.446-.521c-.248-.285-.246-.662-.096-.993.15-.33.501-.518.9-.516l.897.004a.99.99 0 01.845.428l.15.19 11.992 15.721s.05.048.05.096z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- End: Logo And Search -->
+                <!-- Start: Nav PC -->
+                <div class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item"><a href="./booking.html" class="header__nav-link">Khám phá</a></li>
+                        <li class="header__nav-item"><a href="#" class="header__nav-link">Tin tức</a></li>
+                        
+                        <li class="header__nav-item"><a href="./sign-in.html" class="header__nav-link">Đăng nhập</a>
+                            <li class="header__nav-item"><a href="./sign-in.html" class="header__nav-link">username</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- End: Nav PC -->
+                <div class="nav__mobile-btn">
+                    <button class="nav__mobile--show-btn">
+                        <i class="fal fa-align-justify  nav__mobile--show-icon"></i>
+                    </button>
+                </div>
+                <!-- Start: Nav Mobile -->
+                <span class="nav_overlay"></span>
+                <div class="nav__mobile">
+                    <div class="nav__mobile-close">
+                        <span class="fal fa-times nav__mobile-close-icon"></span>
+                    </div>
+                    <ul class="nav__mobile-list">
+                        <li class="nav__mobile-item"><a href="" class="nav__mobile-link">Guide</a></li>
+                        <li class="nav__mobile-item"><a href="" class="nav__mobile-link nav__mobile-link">Blog</a></li>
+                        <li class="nav__mobile-item"><a href="" class="nav__mobile-link">Đăng ký</a></li>
+                        <li class="nav__mobile-item"><a href="" class="nav__mobile-link">Đăng nhập</a></li>
+                        <li class="nav__mobile-item">
+                            <div class="nav__mobile-language">
+                                <img src="./assets/imgs/vi.svg" alt="VietNamese" class="nav__mobile-language-img">
+                                <p class="nav__mobile-language-name">VND</p>
+                                <span class="fas fa-caret-down nav__mobile-language-icon"></span>
+
+                                <div class="mobile__language">
+                                    <ul class="mobile__language-list">
+                                        <li class="change__languages-item">
+                                            <div class="change__languages-vi">
+                                                <img src="./assets/imgs/vi.svg" alt="" class="header__nav-language-img">
+                                                <p class="change__languages-vi-name">Tiếng Việt</p>
+                                                <span class="far fa-check"></span>
+                                            </div>
+                                        </li>
+                                        <li class="change__languages-item">
+                                            <div class="change__languages-vi">
+                                                <img src="./assets/imgs/en.svg" alt="" class="header__nav-language-img">
+                                                <p class="change__languages-vi-name">English</p>
+                                            </div>
+                                        </li>
+                                        <li class="change__languages-item">
+                                            <div class="change__languages-vi">
+                                                <img src="./assets/imgs/ko.svg" alt="" class="header__nav-language-img">
+                                                <p class="change__languages-vi-name">Korean</p>
+                                            </div>
+                                        </li>
+                                        <li class="change__languages-item">
+                                            <div class="change__languages-vi">
+                                                <strong>VND</strong>
+                                                <p class="change__languages-vi-name">Việt Nam Đồng</p>
+                                                <span class="far fa-check"></span>
+                                            </div>
+                                        </li>
+                                        <li class="change__languages-item">
+                                            <div class="change__languages-vi">
+                                                <strong>USD</strong>
+                                                <p class="change__languages-vi-name">United States Dollar</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End: Nav Mobile -->
+            </div>
+        </div>
+    </div>
+    <!-- End: Header -->
+    <!-- Start Main -->
+    <div id="main">
+        <div class="container mt-35">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                </ol>
+            </nav>
+            <div class="row">
+                <div class="col-lg-7 pos-ab">
+                    <div class="content__title">
+                        <h1>Du lịch Cần Thơ nhất định phải ghé thăm những địa điểm này</h1>
+                        <span class="content__description">
+                            <i>Du lịch Cần thơ với chuyến khám phá xứ “gạo trắng nước trong” này thì du khách không nên
+                                bỏ lỡ 7 địa điểm check-in nổi tiếng dưới đây.</i>
+                        </span>
+                        <div class="content__posted">
+                            <p>Đăng tải bởi: <b>Admin</b></p>
+                        </div>
+                    </div>
+                    <div class="content__picture">
+                        <img src="./assets/imgs/blog/du-lich-can-tho-8.jpg" alt="">
+                        <span class="content__posted"><i>Du lịch Cần Thơ nhất định phải ghé thăm những địa điểm nàyẢnh:
+                                Just.linhchi.</i></span>
+                    </div>
+                    <div class="content__detail-header">
+                        <h3 class="content__post-header">Những địa điểm cần ghé thăm khi đi du lịch Cần Thơ</h3>
+                    </div>
+                    <div class="content__detail-body">
+                        <h4 class="content__post-gist">Chợ nổi Cái Răng</h4>
+                        <p>Chợ nổi là một nét văn hóa đặc trưng của miền Tây Nam Bộ mà du khách khó có thể tìm thấy ở
+                            địa phương khác. Chợ nổi Cái Răng chuyên mua bán các loại trái cây, nông sản của vùng. Vào
+                            mỗi buổi sáng, hàng trăm con thuyền lớn bé đậu san sát nhau tạo nên khung cảnh mua bán tấp
+                            nập. Bạn nên đến vào buổi sáng sớm để có thể thưởng thức bữa sáng thú vị trên thuyền và
+                            chứng kiến không khí nhộn nhịp nơi đây.</p>
+                        <img src="./assets/imgs/blog/du-lich-can-tho-1.jpg" alt="">
+                        <span class="content__posted"><i>Ảnh: Canhciu</i></span>
+                    </div>
+                    <div class="content__detail-body">
+                        <h4 class="content__post-gist">Nhà cổ Bình Thủy</h4>
+                        <p>Ngôi nhà nằm trên đường Bùi Hữu Nghĩa, phường Bình Thủy, quận Bình Thủy, Cần Thơ. Nhà cổ Bình
+                            Thủy được thiết kế với 5 gian, 2 mái, mang kiến trúc phương Tây. Các vật dụng trong ngôi nhà
+                            được làm từ nhiều loại gỗ quý và được chạm khắc tinh xảo, đặc trưng của lối sống sinh hoạt
+                            của miền Tây Nam Bộ. Đồng thời, nơi đây còn lưu giữ nhiều đồ cổ quý giá suốt 140 năm qua.
+                        </p>
+                        <img src="./assets/imgs/blog/du-lich-can-tho-2.jpg" alt="">
+                        <span class="content__posted"><i>Ảnh: Quynhnhu78. nguyen</i></span>
+                    </div>
+                    <div class="content__detail-body">
+                        <h4 class="content__post-gist">Bến Ninh Kiều</h4>
+                        <p>Nằm bên hữu ngạn sông Hậu, giữa ngã ba sông Hậu và sông Cần Thơ, người dân xứ Tây Đô gọi nơi
+                            đây là công viên Ninh Kiều hay bến nước Ninh Kiều. Đây cũng được coi là địa điểm du lịch và
+                            văn hóa nổi tiếng. Bến Ninh Kiều thu hút du khách bởi phong cảnh sông nước hữu tình. Ngoài
+                            ra, khu vực bến Ninh Kiều còn có chợ đêm và rất nhiều nhà hàng cho bạn thỏa thích khám phá
+                            ẩm thực miền Tây.</p>
+                        <img src="./assets/imgs/blog/du-lich-can-tho-4.jpg" alt="">
+                        <span class="content__posted"><i>Ảnh: Ngocctraam135.</i></span>
+                    </div>
+                    <!--  -->
+                    <div class="content__homestay">
+                        <div class="content__homestay-header">
+                            <h2>Đi tìm bình yên tại các Homestay Cần Thơ</h2>
+                            <p>Bạn ơi, bạn chán phố, chán phường, chán công viên trò chơi, chán những quảng trường hay
+                                địa điểm du lịch nhân tạo chưa? Nếu chán rồi thì ghé Cần Thơ với tụi mình. Mặc dù là
+                                thành phố lớn của miền Tây nhưng Cần Thơ vẫn mang những sắc màu rất giản dị. Bạn tới
+                                đây, sống trong những homestay Cần Thơ gần gũi, đi chợ nổi ăn quà, vào vườn cây hái quả…
+                                tự khắc tâm trạng cứ thế vui lên.</p>
+                        </div>
+                        <div class="content__homstay-advertisement">
+                            <h5>Amazing House</h5>
+                            <ul class="ml-4">
+                                <li><i><b style="padding-right:5px">Địa chỉ:</b><a
+                                            href="https://www.google.com/maps/place/%C4%90%C6%B0%E1%BB%9Dng+s%E1%BB%91+9,+KHU+D%C3%82N+C%C6%AF+%C4%90%C3%94+TH%E1%BB%8A+M%E1%BB%9AI+H%C6%AFNG+PH%C3%9A,+C%C3%A1i+R%C4%83ng,+C%E1%BA%A7n+Th%C6%A1,+Vi%E1%BB%87t+Nam/@10.0118385,105.7896183,17z/data=!3m1!4b1!4m5!3m4!1s0x31a06287bd78461d:0xb449e1407777e314!8m2!3d10.0118332!4d105.791807">Đường
+                                            số 9, Khu dân cư Hưng Phú 1, Cái Răng, Cần Thơ, Việt Nam</a></i></li>
+                                <li><i><b style="padding-right:5px">Giá:</b>2,100,000₫/ nguyên căn/ 6-8 người</i></li>
+                            </ul>
+                            <p class="mb-0">
+                                <i>
+                                    <b>Bạn tham khảo thêm thông tin về Amazing House <a href="">Tại đây</a> nhé!</b>
+                                </i>
+                            </p>
+                            <p>Amazing House cách xa trung tâm thành phố, đi taxi mất chừng 10 phút. Nhà có 3 phòng ngủ
+                                và sẵn sàng đón tiếp cùng lúc 6-8 vị khách. Amazing có sân, có xích đu, có vườn cây xanh
+                                mát… Nơi đây thích hợp cho một chuyến chạy trốn thành phố để nghỉ ngơi hoặc tụ tập bạn
+                                bè.</p>
+                            <img src="./assets/imgs/blog/homestay-Can-Tho-4.jpg" alt="">
+                            <span class="content__posted"><i>Ngôi vườn “amazing” của nhà.</i></span>
+                            <p>Không gian của Amazing thoáng nhưng phối màu khá mạnh và tối. Nhà được bọc lấy bởi những
+                                bức tường mang sắc lạnh như tím than, xanh dương, nâu sẫm… Tuy nhiên vì phần lớn tường
+                                nhà được thay bằng cửa kính, kệ ngăn nên không có cảm giác bó hẹp. Amazing phù hợp với
+                                những người cá tính mạnh và yêu nghệ thuật.</p>
+                            <img src="./assets/imgs/blog/homestay-Can-Tho-1.jpg" alt="">
+                            <span class="content__posted"><i>Gian phòng cá tính.</i></span>
+                            <p>Tất nhiên, nhà Amazing vẫn có những điểm khá mềm mại, ngọt ngào như là căn phòng nhiệt
+                                đới với bức tường xanh cây lá hoặc phòng hoa cẩm tú tone hồng – đen. Chưa hết, Amazing
+                                còn có một khu vườn nhỏ siêu đáng yêu. Vườn có xích đu, có cây cỏ. Buổi sáng mộng mơ ra
+                                vườn làm một tách trà nghe có vẻ sáng khoái lắm ấy. Tối lại nướng BBQ cũng hết sảy luôn.
+                            </p>
+                        </div>
+                        <div class="content__homstay-advertisement">
+                            <h5>N&D Homestay</h5>
+                            <ul class="ml-4">
+                                <li><i><b style="padding-right:5px">Địa chỉ:</b><a
+                                            href="https://www.google.com/maps/place/H%C6%B0ng+Ph%C3%BA,+C%C3%A1i+R%C4%83ng,+C%E1%BA%A7n+Th%C6%A1,+Vi%E1%BB%87t+Nam/@10.0239275,105.7764743,14z/data=!3m1!4b1!4m5!3m4!1s0x31a062854fbb1a43:0xba3879e225e5532c!8m2!3d10.0291938!4d105.7967419">Hưng
+                                            Phú, Cái Răng, Cần Thơ, Việt Nam</a></i></li>
+
+                            </ul>
+
+                            <p>N&D Homestay là một ngôi nhà vừa lạ mà quen. Vì cùng chủ với Amazing nên căn hộ có những
+                                sắc màu khá là đồng nhất. Vẫn là những căn phòng màu trầm lạnh, vẫn là nội thất cao cấp
+                                đặt trong thiết kế cá tính. Tuy nhiên N&D là dành cho những khách lẻ có nhu cầu thuê
+                                từng căn phòng để nghỉ chân khi ghé Cần Thơ.</p>
+                            <img src="./assets/imgs/blog/homestay-Can-Tho-5.jpg" alt="">
+                            <span class="content__posted"><i>Phòng nhà N&D.</i></span>
+                            <p>Hiện N&D có 5 phòng ngủ tách biệt, mỗi phòng một cái tên riêng. Phòng đầy đủ đồ đạc cần
+                                thiết, phù hợp với nhu cầu khác nhau của du khách. Bạn đến nhà N&D, ở trong không gian
+                                riêng mình, không bị ai làm phiền nhưng nếu cần sử dụng những khu vực chung như bếp,
+                                phòng khách thì cứ tự nhiên nhé, miễn sao không làm ồn, ảnh hưởng tới các bạn cùng nhà
+                                là được.</p>
+                            <img src="./assets/imgs/blog/homestay-Can-Tho-6.jpg" alt="">
+                            <span class="content__posted"><i>Giường ấm áp cho một chuyến đi dài.</i></span>
+                            <p>Từ N&D, bạn di chuyển khoảng 2km sẽ tới trung tâm thành phố Cần Thơ. Tại trung tâm có bến
+                                Ninh Kiều, có Vincom plaza Xuân Khánh. Bến thuyền để tham quan chợ nổi Cái Răng cũng bắt
+                                đầu từ Ninh Kiều đấy, thử một lần cho biết.</p>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+                <div class="col-lg-5 ">
+                    <!--  -->
+                    <div class="sticky">
+                        <!--  -->
+                        <div class="container">
+                            <div class="content__list-nav-title">
+                                Homestay: Hot Trend
+                            </div>
+                            <div class="content__list-nav">
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <img src="./assets/imgs/blog/blog-nav/1.jpg" alt="">
+                                                </div>
+                                                <div class="col-lg-8">
+                                                    <p class="card-list-nav-title">5 resort hạng sang ở Việt Nam xuất
+                                                        hiện trên tạp... <br>
+                                                        <span
+                                                            style="font-size:12px;color:rgb(132, 131, 131)">03/02/2022</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <img src="./assets/imgs/blog/blog-nav/2.jpg" alt="">
+                                                </div>
+                                                <div class="col-lg-8">
+                                                    <p class="card-list-nav-title">Du lịch Cần Thơ nhất định phải ghé
+                                                        thăm những địa...<br>
+                                                        <span
+                                                            style="font-size:12px;color:rgb(132, 131, 131)">03/02/2022</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <img src="./assets/imgs/blog/blog-nav/3.jpg" alt="">
+                                                </div>
+                                                <div class="col-lg-8">
+                                                    <p class="card-list-nav-title">Du lịch Cần Thơ nhất định phải ghé
+                                                        thăm những địa...<br>
+                                                        <span
+                                                            style="font-size:12px;color:rgb(132, 131, 131)">03/02/2022</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <img src="./assets/imgs/blog/blog-nav/4.jpg" alt="">
+                                                </div>
+                                                <div class="col-lg-8">
+                                                    <p class="card-list-nav-title">Trải nghiệm thú vị ở sở thú Zoodoo Đà
+                                                        Lạt<br>
+                                                        <span
+                                                            style="font-size:12px;color:rgb(132, 131, 131)">03/02/2022</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <!--  -->
+                        <div class="container">
+                            <div class="content__list-nav-title">
+                                TravelMag
+                            </div>
+                            <div class="content__list-nav">
+                                <ul>
+                                    <li class="bb-1">
+                                        <a href="" class="card-list-nav-title">Mia House - ngôi nhà thân thiện níu chân
+                                            khách du lịch Đà Lạt</a>
+                                    </li>
+                                    <li class="bb-1">
+                                        <a href="" class="card-list-nav-title">Lạ lùng với 3 homestay Đà Lạt sở hữu bồn
+                                            tắm "lộ thiên"</a>
+                                    </li>
+                                    <li class="bb-1">
+                                        <a href="" class="card-list-nav-title">Cuối tuần đổi gió với 3 homestay Sài Gòn
+                                            vạn góc sống ảo</a>
+                                    </li>
+                                    <li class="bb-1">
+                                        <a href="" class="card-list-nav-title">Babylon House - một thiên đường tình yêu
+                                            lý tưởng</a>
+                                    </li>
+                                    <li class="bb-1">
+                                        <a href="" class="card-list-nav-title">Trải nghiệm không gian vintage siêu xinh
+                                            tại Chill House Dalat</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <!--  -->
+                        <div class="container">
+                            <div class="content__list-nav-title">
+                                Khuyến mãi
+                            </div>
+                            <div class="content__list-nav">
+                                <ul>
+                                    <li style="padding-bottom:130px">
+                                        <a href="">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <img src="./assets/imgs/blog/discount/1.jpg" alt=""
+                                                        style="height:104px">
+                                                    <p class="card-list-nav-title fs-14 ">Hướng dẫn đặt vé tham quan,
+                                                        tour trong ngày, vé tàu...<br>
+                                                        <span
+                                                            style="font-size:12px;color:rgb(132, 131, 131)">03/02/2022</span>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <img src="./assets/imgs/blog/discount/2.jpg" alt=""
+                                                        style="height:104px">
+                                                    <p class="card-list-nav-title fs-14">Luxstay ưu đãi chiến dịch check
+                                                        in linh hoạt: “Yêu không... <br>
+                                                        <span
+                                                            style="font-size:12px;color:rgb(132, 131, 131)">03/02/2022</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <img src="./assets/imgs/blog/discount/3.jpg" alt=""
+                                                        style="height:104px">
+                                                    <p class="card-list-nav-title fs-14">Hướng dẫn thanh toán VNPAY-QR
+                                                        qua app Luxstay<br>
+                                                        <span
+                                                            style="font-size:12px;color:rgb(132, 131, 131)">03/02/2022</span>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <img src="./assets/imgs/blog/blog-nav/4.jpg" alt=""
+                                                        style="height:104px">
+                                                    <p class="card-list-nav-title fs-14">Hướng dẫn thanh toán VNPAY-QR
+                                                        qua website Luxstay<br>
+                                                        <span
+                                                            style="font-size:12px;color:rgb(132, 131, 131)">03/02/2022</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+        <!-- End Main -->
+        <!-- Start: Footer -->
+        <div id="footer">
+            <div class="container">
+                <div id="social">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-5">
+                            <div class="social-item">
+                                <p class="footer__content-heading">SECURE YOUR TRANSACTION</p>
+                                <div class="payment-methods">
+                                    <div class="payment-item">
+                                        <img src="./assets/imgs/visa.svg" alt="" class="payment-img">
+                                    </div>
+                                    <div class="payment-item">
+                                        <img src="./assets/imgs/mastercard.svg" alt="" class="payment-img">
+                                    </div>
+                                    <div class="payment-item">
+                                        <img src="./assets/imgs/maestro.svg" alt="" class="payment-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="social-item">
+                                <p class="footer__content-heading">CERTIFICATION</p>
+                                <div class="business-partner">
+                                    <div class="business-item">
+                                        <img src="./assets/imgs/bct.png" alt="" class="business-img">
+                                    </div>
+                                    <div class="business-item">
+                                        <img src="./assets/imgs/dmca.png" alt="" class="business-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-3">
+                            <div class="social-item">
+                                <p class="footer__content-heading">FOLLOW US</p>
+                                <div class="social-network">
+                                    <div class="social-item">
+                                        <a href=""><i class="fab fa-instagram social-icon"></i></a>
+                                    </div>
+                                    <div class="social-item">
+                                        <a href=""><i class="fab fa-youtube social-icon"></i></a>
+                                    </div>
+                                    <div class="social-item">
+                                        <a href=""><i class="fab fa-facebook-f social-icon"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="copyright">
+                    <div class="container">
+                        <p class="copyright-content">&copy;2023 Nhóm 1.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="move-on-top">
+                <div class="move-on-top__container">
+                    <a href="#"><i class="fas fa-arrow-up move-on-top-btn"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- End: Footer -->
+
+        <!--JS Slider -->
+        <script src="./js/slider/jquery.min.js"></script>
+        <script src="./js/slider/owl.carousel.js"></script>
+        <script src="./js/slider/slider.js"></script>
+        <!-- JS -->
+        <script src="./js/main.js"></script>
+</body>
+
+</html>
